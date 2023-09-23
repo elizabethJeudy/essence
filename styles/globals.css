@@ -130,6 +130,12 @@ span.text-red {
   width: 100%;
 }
 
+.mission-container {
+  text-align: center;
+  margin: 40px 0px;
+  color: #324d67;
+}
+
 
 .content-container {
   margin: 15px;
@@ -273,23 +279,6 @@ span.text-red {
   align-self: flex-end;
 }
 
-.products-heading {
-  text-align: center;
-  margin: 40px 0px;
-  color: #324d67;
-
-}
-
-.products-heading h2 {
-  font-family: 'Fraunces', serif;
-  font-size: 40px;
-  font-weight: 800;
-}
-
-.products-heading p {
-  font-size: 16px;
-  font-weight: 200;
-}
 
 .footer-banner-container {
   padding: 100px 40px;
