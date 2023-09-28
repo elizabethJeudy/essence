@@ -9,7 +9,7 @@ font-family: 'Space Mono',monospace;
 :root {
   --primary-color: #E9EBE8;
   --accent-color: #FFFCF8;
-  --hover-color: #7A867B;
+  --hover-color: #727E74;
   --font-color: #23231A;
 }
 
@@ -21,20 +21,24 @@ body,
   margin: 0;
   font-family: 'Fraunces', serif;
   box-sizing: border-box;
+}
 
+body {
+  background-color: var(--primary-color);
 }
 
 /*::-webkit-scrollbar {
   width: 0px;
 }*/
 
-/* hero banner styling */
+/******************************** HERO BANNER ********************************/
 .hero-banner-container {
   padding: 100px 40px;
   position: relative;
   height: 500px;
   line-height: 0.9;
   width: 100%;
+  border-bottom: 1px solid black;
 }
 
 .hero-banner-image {
@@ -64,10 +68,123 @@ body,
 
 .hero-banner-container button:hover {
   background-color: var(--primary-color);
+  font-weight: 400;
   transition: 0.5s ease-in-out;
 }
 
+/********************************  MISSION CONTAINER ********************************/
+.mission-container {
+  text-align: center;
+  margin: 60px 0px;
+}
 
+.mission-container p {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: var(--font-color)
+}
+
+.mission-container h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 48px;
+  color: var(--font-color)
+}
+
+
+/******************************** 4 PRODUCT DISPLAY ********************************/
+
+.products-container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.product-card {
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+
+}
+
+.product-card:hover {
+  transform: scale(1.1, 1.1)
+}
+
+.product-image {
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.product-price {
+  font-family: 'Space Mono', monospace;
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+/******************************** CONTENT CONTAINERS  ********************************/
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+
+}
+
+.border-box {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.content-box-one {
+  border-right: 1px solid black;
+  height: 300px;
+  padding: 20px 10px;
+}
+
+.box-one-tagline {
+  font-family: 'Space Mono', monospace;
+  padding-bottom: 10px;
+  ;
+}
+
+
+
+.content-box-one h2 {
+  font-size: 40px;
+}
+
+.skincare {
+  background-color: var(--accent-color);
+  text-align: center;
+  padding: 50px;
+}
+
+
+
+.content-box-two {
+  height: 300px;
+}
 
 
 a {
@@ -179,78 +296,9 @@ span.text-red {
   width: 100%;
 }
 
-.mission-container {
-  text-align: center;
-  margin: 40px 0px;
-  color: #324d67;
-}
 
 
-.content-container {
-  margin: 15px;
-  background-color: green;
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-
-}
-
-.border-box {
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
-}
-
-
-.content-box-one {
-  background-color: orange;
-  height: 300px;
-}
-
-.content-box-two {
-  height: 300px;
-}
-
-.product-card {
-  cursor: pointer;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
-  color: #324d67;
-
-}
-
-.product-card:hover {
-  transform: scale(1.1, 1.1)
-}
-
-.product-image {
-  border-radius: 15px;
-  background-color: #ebebeb;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
-}
-
-.product-name {
-  font-weight: 500;
-}
-
-.product-price {
-  font-weight: 800;
-  margin-top: 6px;
-  color: black;
-}
 
 
 .footer-banner-container {
@@ -729,6 +777,10 @@ span.text-red {
 .product-max-qty {
   margin-top: 10px;
 }
+
+
+/******************************** MEDIA QUERIES ********************************/
+
 
 @media screen and (max-width:800px) {
   .hero-banner-container {
